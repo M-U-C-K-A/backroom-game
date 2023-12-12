@@ -1,0 +1,268 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  color: white;
+  background-color: black;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  font-feature-settings: "cv11", "ss01";
+  font-variation-settings: "opsz" 32;
+  max-width: 1920px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 18px 12px;
+  display: flex;
+  justify-content: space-around;
+}
+header div {
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+header img {
+  width: 26px;
+}
+header img:hover {
+  filter: opacity(0.5);
+}
+header ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 32px;
+  list-style: none;
+  width: 100%;
+  font-size: 16px;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+header ul li a:hover {
+  opacity: 0.6;
+}
+
+button {
+  width: 50%;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  border: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 12px;
+}
+button img {
+  height: 36px;
+  margin-left: 15px;
+}
+button.primary {
+  background-color: #ff87c3;
+  border: 2px solid #ff87c3;
+}
+button.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  --grid-size: 8rem;
+  --grid-line-color: rgba(20, 20, 20, 1);
+  background: black;
+  background-image: radial-gradient(rgba(255, 135, 195, 0.02), rgb(0, 0, 0)), linear-gradient(var(--grid-line-color) 0.1em, transparent 0.1em), linear-gradient(90deg, var(--grid-line-color) 0.1em, transparent 0.1em);
+  background-position: center center;
+  background-size: cover, var(--grid-size) var(--grid-size), var(--grid-size) var(--grid-size);
+  position: fixed;
+}
+
+.main-hero {
+  padding: 0 50px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+}
+.main-hero .big-title {
+  line-height: 4.5rem;
+  font-weight: 900;
+  font-size: 90px;
+  width: 45%;
+}
+.main-hero .big-title span {
+  margin: 0;
+  padding: 0;
+  height: 1.5rem;
+}
+.main-hero .big-title .gray {
+  color: rgb(90, 90, 90);
+}
+.main-hero .hero-element {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-hero .hero-element .element-progress {
+  display: flex;
+  width: 50%;
+  margin: 5px auto 10px auto;
+  gap: 5px;
+}
+.main-hero .hero-element .element-progress span {
+  height: 6px;
+  border-radius: 5px;
+  width: 33%;
+  background-color: gray;
+}
+.main-hero .hero-element .element-progress span:nth-child(2) {
+  background-color: white;
+}
+.main-hero .hero-element .call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.team-section {
+  margin: 0 auto 64px auto;
+}
+.team-section .team-description {
+  text-align: center;
+}
+.team-section .team-members {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.team-section li:nth-child(2n) {
+  padding: 0 10px;
+  color: #ff87c3;
+  font-size: 5rem;
+}
+.team-section .strong {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-direction: reverse;
+  background-image: linear-gradient(100deg, #cc4689 0%, #ff87c3 100%);
+  background-size: 100% 100%;
+  background-clip: text;
+  font-style: italic;
+  font-weight: 900;
+  text-align: center;
+  color: #ff87c3;
+}
+
+.project-cards {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 20px);
+  gap: 8px;
+}
+.project-cards:hover > .card::after {
+  opacity: 1;
+}
+.project-cards .project-card {
+  width: 40%;
+  aspect-ratio: 5/2;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  position: relative;
+}
+.project-cards .project-card:hover::before {
+  opacity: 1;
+}
+.project-cards .project-card::before, .project-cards .project-card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+.project-cards .project-card::before {
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.5), transparent 40%);
+  z-index: 3;
+}
+.project-cards .project-card::after {
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40%);
+  z-index: 1;
+}
+.project-cards .project-card .card-number {
+  font-size: 3rem;
+}
+
+.immersive-gameplay-section {
+  margin: 40px auto;
+  width: 80%;
+  text-align: left;
+}
+.immersive-gameplay-section .section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+.immersive-gameplay-section .section-paragraph {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 10px 0;
+}
+.immersive-gameplay-section .section-cta {
+  margin-top: 20px;
+  width: 420px;
+}
+.immersive-gameplay-section .section-cta .secondary-cta {
+  background-color: transparent;
+  color: #ff87c3;
+  border: 2px solid #ff87c3;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.immersive-gameplay-section .section-images {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.immersive-gameplay-section .section-images img {
+  max-width: 45%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=style.css.map */

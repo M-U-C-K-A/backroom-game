@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="background"> </div>
+    <header>
+        <div class="logo">
+            <img src="src/logo.svg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Thrailer</a></li>
+                <li><a href="">Staff</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="platform-icons">
+            <ul>
+                <li><img src="src/playstation.svg" alt="PlayStation"></li>
+                <li><img src="src/windows.svg" alt="Windows"></li>
+                <li><img src="src/xbox.svg" alt="Xbox"></li>
+                <li><img src="src/steam.svg" alt="Steam"></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main-hero">
+        <h1 class="big-title">
+            <span class="gray">THE ESCAPE</span> <br>
+            <span class="gray">AN GAME WITH</span> <br>
+            <span>CREATIVE</span> <br>
+            <span>GAMEPLAY</span> <br>
+            <span class="gray">AND</span> <br>
+            <span>IMMERSIVE </span><br>
+            <span>STORIES</span>
+        </h1>
+        <div class="hero-element">
+            <img src="src/bust-temp.png" alt="Character">
+            <div class="element-progress">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="call-to-action">
+                <button class="primary">
+                    <img src="src/apple-fill.svg" alt="Apple"> Télécharger sur MAC</button>
+                <button class="secondary">
+                    <img src="src/windows-fill.svg" alt="Windows"> Télécharger sur Windows</button>
+            </div>
+        </div>
+    </div>
+    <div class="team-section">
+        <ul class="team-members">
+            <li>Astélie</li>
+            <li> · </li>
+            <li>Bilal</li>
+            <li> · </li>
+            <li>Esther</li>
+            <li> · </li>
+            <li>Hugo</li>
+            <li> · </li>
+            <li>Nabil</li>
+            <li> · </li>
+            <li>Tom</li>
+        </ul>
+        <h2 class="team-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span
+                class="strong">Velit,
+                quaerat.</span></h2>
+    </div>
+    <div class="project-cards" id="project-cards">
+        <div class="project-card">
+            <h2 class="card-number">01</h2>
+            <h4 class="job-title">Modélisation 3D</h4>
+            <h3 class="member-name">Asterie</h3>
+        </div>
+        <div class="project-card">
+            <h2 class="card-number">02</h2>
+            <h4 class="job-title">Intégration VR</h4>
+            <h3 class="member-name">Esther</h3>
+        </div>
+        <div class="project-card">
+            <h2 class="card-number">03</h2>
+            <h4 class="job-title">Développeur Web</h4>
+            <h3 class="member-name">Hugo</h3>
+        </div>
+        <div class="project-card">
+            <h2 class="card-number">04</h2>
+            <h4 class="job-title">Opérateur Sonore</h4>
+            <h3 class="member-name">Tom</h3>
+        </div>
+        <div class="project-card">
+            <h2 class="card-number">05</h2>
+            <h4 class="job-title">Programmeur</h4>
+            <h3 class="member-name">Bilal</h3>
+        </div>
+        <div class="project-card">
+            <h2 class="card-number">06</h2>
+            <h4 class="job-title">Programmeur</h4>
+            <h3 class="member-name">Nabil</h3>
+        </div>
+    </div>
+    <div class="immersive-gameplay-section">
+        <h2 class="section-title">Une expérience immersive</h2>
+        <p class="section-paragraph">
+            Découvrez une aventure captivante avec un gameplay innovant qui repousse les limites.
+        </p>
+        <div class="section-cta">
+            <button class="secondary-cta">En savoir plus</button>
+        </div>
+        <div class="section-images">
+            <img src="src/gameplay-image1.jpg" alt="Immersive Gameplay Image 1">
+            <img src="src/gameplay-image2.jpg" alt="Immersive Gameplay Image 2">
+        </div>
+    </div>
+    
+
+
+
+    <script>
+        document.getElementById("project-cards").onmousemove = e => {
+            for (const card of document.getElementsByClassName("project-card")) {
+                const rect = card.getBoundingClientRect(),
+                    x = e.clientX - rect.left,
+                    y = e.clientY - rect.top;
+
+                card.style.setProperty("--mouse-x", `${x}px`);
+                card.style.setProperty("--mouse-y", `${y}px`);
+                console.log(x, y);
+            };
+        }
+    </script>
+</body>
+
+</html>
