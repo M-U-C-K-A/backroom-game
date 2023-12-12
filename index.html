@@ -9,7 +9,37 @@
 </head>
 
 <body>
+
+    <style>
+        .hero-bg {
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            z-index: -1;
+        }
+        .video-player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            opacity: .5;
+            z-index: -1;
+            display: block;
+        }
+    </style>
     <div class="background"> </div>
+
+    <div class="hero-bg">
+        <video muted="true" loop="true" autoplay="true" class="video-player">
+            <source src="src/9ef383ab-e5d0b1c7.mp4" type="video/webm" />
+
+            <source src="src/9ef383ab-e5d0b1c7.mp4" type="video/mp4" />
+        </video>
+    </div>
     <header>
         <div class="logo">
             <img src="src/logo.svg" alt="Logo">
@@ -17,7 +47,7 @@
         <div class="nav-links">
             <ul>
                 <li><a href="">Accueil</a></li>
-                <li><a href="">Thrailer</a></li>
+                <li><a href="">Trailer</a></li>
                 <li><a href="">Staff</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
@@ -119,7 +149,7 @@
             <img src="src/gameplay-image2.jpg" alt="Immersive Gameplay Image 2">
         </div>
     </div>
-    
+
 
 
 
