@@ -1,17 +1,18 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   overflow-x: hidden;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: space-grotesk, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
   -moz-tab-size: 4;
     -o-tab-size: 4;
        tab-size: 4;
   font-feature-settings: "cv11", "ss01";
   font-variation-settings: "opsz" 32;
-  max-width: 1920px;
+  max-width: 1440px;
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.2;
@@ -55,8 +56,10 @@ header ul li a:hover {
   opacity: 0.6;
 }
 
-button {
-  width: 50%;
+a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 45px;
   border-radius: 10px;
   font-size: 1.3rem;
@@ -67,52 +70,29 @@ button {
   align-items: center;
   gap: 12px;
 }
-button img {
+a img {
   height: 36px;
   margin-left: 15px;
 }
-button.primary {
+a.primary {
   background-color: #ff87c3;
   border: 2px solid #ff87c3;
 }
-button.secondary {
+a.secondary {
   background-color: transparent;
   color: white;
   border: 2px solid white;
 }
 
-.main-hero {
-  padding: 0 50px;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: left;
-}
-.main-hero .big-title {
-  line-height: 4.5rem;
-  font-weight: 900;
-  font-size: 90px;
-  width: 45%;
-}
-.main-hero .big-title span {
-  margin: 0;
-  padding: 0;
-  height: 1.5rem;
-}
-.main-hero .big-title .gray {
-  color: rgb(90, 90, 90);
-}
-.main-hero .hero-element {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.main-hero .main-title text {
+  font-size: max(5.125rem, min(13.3333vw + 2rem, 18rem));
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  text-transform: capitalize;
 }
 .main-hero .hero-element .element-progress {
   display: flex;
-  width: 50%;
   margin: 5px auto 10px auto;
   gap: 5px;
 }
@@ -124,14 +104,6 @@ button.secondary {
 }
 .main-hero .hero-element .element-progress span:nth-child(2) {
   background-color: white;
-}
-.main-hero .hero-element .call-to-action {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  width: 100%;
 }
 
 .team-section {
