@@ -5,8 +5,6 @@
 
 body {
   overflow-x: hidden;
-  color: white;
-  background-color: black;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
   -moz-tab-size: 4;
     -o-tab-size: 4;
@@ -14,6 +12,11 @@ body {
   font-feature-settings: "cv11", "ss01";
   font-variation-settings: "opsz" 32;
   max-width: 1920px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  background-color: #0e100f;
+  color: #fffce1;
 }
 
 header {
@@ -76,19 +79,6 @@ button.secondary {
   background-color: transparent;
   color: white;
   border: 2px solid white;
-}
-
-.background {
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  --grid-size: 8rem;
-  --grid-line-color: rgba(20, 20, 20, 1);
-  background: black;
-  background-image: radial-gradient(rgba(255, 135, 195, 0.02), rgb(0, 0, 0)), linear-gradient(var(--grid-line-color) 0.1em, transparent 0.1em), linear-gradient(90deg, var(--grid-line-color) 0.1em, transparent 0.1em);
-  background-position: center center;
-  background-size: cover, var(--grid-size) var(--grid-size), var(--grid-size) var(--grid-size);
-  position: fixed;
 }
 
 .main-hero {
@@ -188,41 +178,15 @@ button.secondary {
   width: calc(100% - 20px);
   gap: 8px;
 }
-.project-cards:hover > .card::after {
-  opacity: 1;
-}
 .project-cards .project-card {
   width: 40%;
   aspect-ratio: 5/2;
   padding: 6px 10px;
   border-radius: 8px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: #db4f66;
   border-radius: 10px;
   position: relative;
-}
-.project-cards .project-card:hover::before {
-  opacity: 1;
-}
-.project-cards .project-card::before, .project-cards .project-card::after {
-  border-radius: inherit;
-  content: "";
-  height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  transition: opacity 500ms;
-  width: 100%;
-}
-.project-cards .project-card::before {
-  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.5), transparent 40%);
-  z-index: 3;
-}
-.project-cards .project-card::after {
-  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40%);
-  z-index: 1;
 }
 .project-cards .project-card .card-number {
   font-size: 3rem;
