@@ -11,21 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Document</title>
-</head>
-
-<body>
-
     <style>
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            display: block;
-            z-index: -1;
-        }
-
         .video-player {
             position: absolute;
             top: 0;
@@ -36,13 +22,15 @@
             display: block;
         }
     </style>
+</head>
+
+<body>
+
     <div class="background"> </div>
 
-    <div class="hero-bg">
+    <div class="hero-bg absolute top-0 left-0 w-screen h-screen block">
         <video muted="true" loop="true" autoplay="true" class="video-player">
-            <source src="src/9ef383ab-e5d0b1c7.mp4" type="video/webm" />
-
-            <source src="src/9ef383ab-e5d0b1c7.mp4" type="video/mp4" />
+            <source src="src/Trailer-JPO.mp4" type="video/mp4" />
         </video>
     </div>
     <header>
@@ -66,18 +54,18 @@
             </ul>
         </div>
     </header>
-    <div class="main-hero h-screen w-full flex justify-start flex-col pt-40 align-center text-center">
-        <h1 class="main-title w-full min-h-96">
+    <div class="main-hero h-screen w-screen flex justify-start flex-col pt-40 align-center text-center">
+        <h1 class="main-title w-full height">
             <text x="20" y="35" class="small">the</text>
             <br>
             <text x="65" y="55" class="heavy">escape</text>
         </h1>
         <div class="hero-element flex flex-row align-center justify-around">
             <div class="left-text w-3/6 flex justify-center align-center">
-                le jeu est aussi disponible en <a href="">vr</a>
+                *le jeu est aussi disponible en <a href="">vr</a>
             </div>
-            <div class="call-to-action w-3/6 flex flex-col justify-center align-center gap-15">
-                <a class="secondary">
+            <div class="call-to-action w-3/6 flex flex-row justify-center align-center gap-15">
+                <a class="secondary p-4">
                     <img src="src/windows-fill.svg" alt="Windows"> Télécharger sur Windows</button>
                     </a>
             </div>
@@ -119,7 +107,7 @@
         </div>
         <div class="project-card">
             <h2 class="card-number">04</h2>
-            <h4 class="job-title">Opérateur Sonore</h4>
+            <h4 class="job-title">Développeur web</h4>
             <h3 class="member-name">Tom</h3>
         </div>
         <div class="project-card">
