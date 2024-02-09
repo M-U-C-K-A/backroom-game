@@ -1,0 +1,74 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #0e100f;
+  color: #fffce1;
+  box-sizing: border-box;
+}
+body .gallery-container,
+html .gallery-container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto;
+}
+body .gallery-container .card,
+html .gallery-container .card {
+  padding: 20px;
+  cursor: pointer;
+}
+body .gallery-container .card img,
+html .gallery-container .card img {
+  max-width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .gallery-container .card .description,
+html .gallery-container .card .description {
+  display: none;
+}
+
+.popup {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease;
+}
+.popup.active {
+  display: block;
+  opacity: 1;
+}
+.popup .popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #454545;
+  padding: 20px;
+  text-align: center;
+}
+.popup .popup-content .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.popup .popup-content .card img {
+  max-width: 100%;
+  max-height: 80vh;
+}
+.popup .popup-content .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 50px;
+  cursor: pointer;
+}/*# sourceMappingURL=gallery.css.map */

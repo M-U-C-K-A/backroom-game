@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="src/logo.svg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Trailer</a></li>
+                <li><a href="">Staff</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="platform-icons">
+            <ul>
+                <li><img src="src/playstation.svg" alt="PlayStation"></li>
+                <li><img src="src/windows.svg" alt="Windows"></li>
+                <li><img src="src/xbox.svg" alt="Xbox"></li>
+                <li><img src="src/steam.svg" alt="Steam"></li>
+            </ul>
+        </div>
+    </header>
+    <div class="gallery-container pt-40">
+       
+        <div class="card" onclick="openPopup(this)">
+            <img src="src/gallery/TheEscape-light.svg" alt="">
+            <p class="description">Description for Printer</p>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="Mercury idle" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/16930f5fc38f4b6597351c4272a99440/embed"></iframe>
+            </div>
+            <p class="description">Description for Mercury Idle</p>
+        </div>
+        
+        <div class="card" onclick="openPopup(this)">
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="Mercure animation marche" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b31e52818f3c41b3814ae3f74acadc6d/embed"></iframe>
+            </div>
+            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit doloribus quaerat minima quod, maiores voluptates mollitia repellendus? Fuga adipisci accusantium debitis, explicabo tempore delectus voluptatibus corporis totam eos magni tenetur!</p>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="src/gallery/printer.png" alt="">
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt non magnam facere repudiandae sapiente id aut accusantium aliquid. Non necessitatibus commodi expedita! Corrupti doloremque maiores assumenda non reiciendis omnis culpa.</p>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="src/gallery/backroom-confidential_1.jpg" alt="">
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt non magnam facere repudiandae sapiente id aut accusantium aliquid. Non necessitatibus commodi expedita! Corrupti doloremque maiores assumenda non reiciendis omnis culpa.</p>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="src/gallery/backroom-confidential_2.jpg" alt="">
+            <p class="description">Description for Printer</p>
+        </div>
+        <div class="card" onclick="openPopup(this)">
+            <img src="src/gallery/backroom-confidential_3.jpg" alt="">
+            <p class="description">Description for Printer</p>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="popup-content-container"></div>
+        </div>
+    </div>
+
+    <script src="../scripts/gallery.js"></script>
+</body>
+</html>
