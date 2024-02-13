@@ -59,9 +59,11 @@ body {
     color: #fffce1;
 }
 .height {
-height: 70vh;
+    height: 70vh;
 }
 header {
+    z-index: 50;
+    background-color: rgb(23, 23, 23);
     position: fixed;
     width: 100%;
     padding: 18px 12px;
@@ -232,7 +234,7 @@ a {
             background-size: cover;
             background-position: 50% 20%;
         }
-        filter: grayscale(.8);
+        filter: grayscale(0.8);
         &:hover {
             filter: grayscale(0);
         }
@@ -267,6 +269,10 @@ a {
             padding: 10px 20px;
             font-size: 1.2rem;
             cursor: pointer;
+            &:hover {
+                background-color: #ff87c3;
+                color: black;
+            }
         }
     }
 
@@ -279,6 +285,37 @@ a {
             max-width: 45%;
             border-radius: 8px;
             margin-bottom: 20px;
+        }
+    }
+}
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    background-color: rgb(23, 23, 23);
+    .footer {
+        width: 80%;
+        padding: 0 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .backroom-image {
+            padding: 40px;
+            img {
+                width: 140px;
+                height: 140px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+        .right-panel {
+            tr {
+                display: flex;
+                gap: 20px;
+                th,td {
+                    width: 80px;
+                }
+            }
         }
     }
 }
