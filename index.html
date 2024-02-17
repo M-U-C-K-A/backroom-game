@@ -5,36 +5,32 @@
     <meta charset="UTF-8">
     <meta name="google" content="notranslate">
     <meta name="referrer" content="origin">
-    <meta property="og:title" content="The Escape - horror game">
-    <meta property="og:site_name" content="The Escape">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+
     <meta http-equiv="Content-Language" content="fr-FR">
-    <meta property="og:title" content="The Escape" />
+    <meta property="og:title" content="The Escape - horror game" />
+    <meta property="og:site_name" content="The Escape">
     <meta property="og:type" content="game.horror" />
     <meta property="og:url" content="https://m-u-c-k-a.github.io/backroom-game/" />
     <meta property="og:image" content="src/gallery/meta.png" />
     <meta property="og:description" content="Le site officiel du jeu 'The Escape'" />
+
     <meta name="description" content="Le site officiel du jeu 'The Escape'">
     <meta name="keywords" content="the escape,game,game design,horror,horror game,vr,vr game">
-    <link rel="icon" type="image/svg" href="src/logo.svg" />
+    <meta name="theme-color" content="#1e2327">
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" class="js-site-favicon" type="image/png" href="src/icon.png">
+
+    <link rel="icon" type="image/png" href="src/icon.png" />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="gsap.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>Document</title>
-    <style>
-        .video-player {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            opacity: .5;
-            z-index: -1;
-            display: block;
-        }
-    </style>
+    <title>The Escape - horror game</title>
 </head>
 
 <body>
@@ -48,14 +44,14 @@
     </div>
     <header>
         <div class="logo">
-            <img src="src/logo.svg" alt="Logo">
+            <img src="src/icon.png" alt="Logo">
         </div>
         <div class="nav-links">
             <ul>
-                <li><a href="">Accueil</a></li>
+                <li><a href="#">Accueil</a></li>
                 <li><a href="">Trailer</a></li>
-                <li><a href="">Staff</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#team">équipe</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </div>
         <div class="platform-icons">
@@ -74,8 +70,9 @@
             <text x="65" y="55" class="heavy">escape</text>
         </h1>
         <div class="hero-element flex flex-row align-center justify-around">
-            <div class="left-text w-3/6 flex justify-center align-center">
-                *le jeu est aussi disponible en <a href="">vr</a>
+            <div class=" w-3/6 flex justify-center">
+                <p class="flex content-end">*le jeu est aussi disponible en </p>
+                <a class="flex content-start" href="">vr</a>
             </div>
             <div class="call-to-action w-3/6 flex flex-row justify-center align-center gap-15">
                 <a class="secondary p-4">
@@ -84,7 +81,7 @@
             </div>
         </div>
     </div>
-    <div class="team-section">
+    <div id="team" class="team-section">
         <ul class="team-members">
             <li>Astélie</li>
             <li> · </li>
@@ -100,6 +97,53 @@
         </ul>
         <h2 class="team-description">L'équipe à l'origine de la licence<span class="strong">The escape</span></h2>
     </div>
+
+    <div class="story-project flex flex-col justify-center content-center prose">
+        <div class="information mb-5">
+            <h2 class="text-4xl bold mb-5">The Escape</h2>
+            <p class="text-xl mb-5">S'échapper : Explorez chaque recoin des backrooms et de l'hôtel Overlook pour
+                trouver les
+                indices nécessaires à votre évasion. Faites preuve de perspicacité et de courage pour surmonter les
+                obstacles qui se dressent sur votre chemin.</p>
+            <p class="text-xl">Comprendre le mystère : Chaque étage recèle des secrets et des énigmes à résoudre.
+                Plongez-vous dans l'histoire immersive du jeu et découvrez les vérités cachées qui se cachent derrière
+                chaque porte.</p>
+        </div>
+        <div id="demo" class="w-full flex justify-center text-center relative h-20 w-98 m-auto"></div>
+        <script defer>
+            gsap.registerPlugin(TextPlugin, EasePack);
+
+            var container = $("#demo"),
+                _sentenceEndExp = /(\.|\?|!)$/g;
+
+            function machineGun(text) {
+                var words = text.split(" "),
+                    tl = gsap.timeline({ delay: 0.6, repeat: 200, repeatDelay: 1.3 }),
+                    wordCount = words.length,
+                    time = 0,
+                    word, element, duration, isSentenceEnd, i;
+
+                for (i = 0; i < wordCount; i++) {
+                    word = words[i];
+                    isSentenceEnd = _sentenceEndExp.test(word);
+                    element = $("<h3>" + word + "</h3>").appendTo(container);
+                    duration = Math.max(0.5, word.length * 0.08);
+                    if (isSentenceEnd) {
+                        duration += 0.6;
+                    }
+                    gsap.set(element, { autoAlpha: 0, scale: 0, z: 0.01 });
+                    tl.to(element, duration, { scale: 1.2, ease: "slow(0.25, 0.9)" }, time)
+                        .to(element, duration, { autoAlpha: 1, ease: "slow(0.25, 0.9, true)" }, time);
+                    time += duration - 0.05;
+                    if (isSentenceEnd) {
+                        time += 0.6;
+                    }
+                }
+
+            }
+            machineGun("Si vous vous perdez, il vous gagnera...");</script>
+    </div>
+
     <div class="project-cards" id="project-cards">
         <div class="project-card">
             <h2 class="card-number">01</h2>
@@ -135,7 +179,11 @@
     <div class="immersive-gameplay-section">
         <h2 class="section-title">premier étage</h2>
         <p class="section-paragraph">
-            Un étage fidèle à la vision commune des backrooms.
+            Plongez dans l'obscurité oppressante des backrooms, un dédale infini de couloirs vides et décrépis où le
+            temps semble s'être arrêté. Chaque pas résonne dans le vide, chaque ombre cache un mystère. Les murs jaunis
+            et délavés semblent se refermer sur vous, vous invitant à découvrir les secrets enfouis dans les recoins les
+            plus sombres de cet univers étrange. Seuls les plus courageux oseront s'aventurer dans ce dédale sans fin, à
+            la recherche de la clé de leur liberté.
         </p>
         <div class="section-cta">
             <!-- renvoit vers la gallery -->
@@ -149,7 +197,7 @@
     <div class="immersive-gameplay-section">
         <h2 class="section-title">deuxième étage</h2>
         <p class="section-paragraph">
-            Un étage faisent étrangement référence a l'hôtel de shining.
+            Émergez de l'obscurité des backrooms pour entrer dans l'hôtel Overlook, où l'atmosphère sinistre est imprégnée de teintes rougeoyantes. Les couloirs semblent s'étendre à l'infini, chaque porte dissimulant des secrets terrifiants. Les fantômes du passé rôdent dans les couloirs, vous observant depuis l'ombre. L'air est chargé de mystère et d'angoisse, vous invitant à percer les vérités cachées derrière chaque porte close. Seuls les plus astucieux pourront découvrir la clé de leur évasion, avant que les ténèbres ne les engloutissent à jamais.
         </p>
         <div class="section-cta">
             <!-- renvoit vers la gallery -->
@@ -161,9 +209,9 @@
         </div>
     </div>
     <footer>
-        <div class="footer">
+        <div id="footer" class="footer">
             <div class="backroom-image">
-                <img src="src/logo.svg" alt="">
+                <img src="src/icon.png" alt="">
             </div>
             <div class="right-panel">
                 <table>

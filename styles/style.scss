@@ -63,7 +63,7 @@ body {
 }
 header {
     z-index: 50;
-    background-color: rgb(23, 23, 23);
+    background-color: black;
     position: fixed;
     width: 100%;
     padding: 18px 12px;
@@ -282,37 +282,82 @@ a {
         justify-content: space-around;
 
         img {
-            max-width: 45%;
-            border-radius: 8px;
+            width: 50%;
             margin-bottom: 20px;
+            object-fit: cover;
+            height: 700px;
+            transition: 0.2s;
+            opacity: 0.2;
+            &:first-child {
+                border-radius: 8px 0 0 8px;
+            }
+            &:last-child {
+                border-radius: 0 8px 8px 0;
+            }
+            &:hover {
+                width: 60%;
+                opacity: 0.8;
+            }
         }
     }
 }
+
+.video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: .5;
+    z-index: -1;
+    display: block;
+}
+
+.information {
+    width: 800px;
+}
+
+#demo {
+    height: 400px;
+    h3 {
+        position: absolute;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        width: 800px;
+        text-align: center;
+        visibility: hidden;
+        font-size: 120px;
+        top: 65px;
+    }
+}
+
 footer {
     display: flex;
     justify-content: center;
     width: 100vw;
-    background-color: rgb(23, 23, 23);
+    background-image: url('../src/Lens\ Flare.png');
+    background-position: 20% 90%;
     .footer {
         width: 80%;
         padding: 0 20%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         .backroom-image {
             padding: 40px;
             img {
                 width: 140px;
                 height: 140px;
-                object-fit: cover;
-                border-radius: 50%;
+                object-fit: contain;
             }
         }
         .right-panel {
             tr {
                 display: flex;
                 gap: 20px;
-                th,td {
+                th,
+                td {
                     width: 80px;
                 }
             }

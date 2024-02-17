@@ -62,7 +62,7 @@ body {
 
 header {
   z-index: 50;
-  background-color: rgb(23, 23, 23);
+  background-color: black;
   position: fixed;
   width: 100%;
   padding: 18px 12px;
@@ -272,16 +272,60 @@ a.secondary {
   justify-content: space-around;
 }
 .immersive-gameplay-section .section-images img {
-  max-width: 45%;
-  border-radius: 8px;
+  width: 50%;
   margin-bottom: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 700px;
+  transition: 0.2s;
+  opacity: 0.2;
+}
+.immersive-gameplay-section .section-images img:first-child {
+  border-radius: 8px 0 0 8px;
+}
+.immersive-gameplay-section .section-images img:last-child {
+  border-radius: 0 8px 8px 0;
+}
+.immersive-gameplay-section .section-images img:hover {
+  width: 60%;
+  opacity: 0.8;
+}
+
+.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.5;
+  z-index: -1;
+  display: block;
+}
+
+.information {
+  width: 800px;
+}
+
+#demo {
+  height: 400px;
+}
+#demo h3 {
+  position: absolute;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  width: 800px;
+  text-align: center;
+  visibility: hidden;
+  font-size: 120px;
+  top: 65px;
 }
 
 footer {
   display: flex;
   justify-content: center;
   width: 100vw;
-  background-color: rgb(23, 23, 23);
+  background-image: url("../src/Lens Flare.png");
+  background-position: 20% 90%;
 }
 footer .footer {
   width: 80%;
@@ -296,14 +340,14 @@ footer .footer .backroom-image {
 footer .footer .backroom-image img {
   width: 140px;
   height: 140px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 footer .footer .right-panel tr {
   display: flex;
   gap: 20px;
 }
-footer .footer .right-panel tr th, footer .footer .right-panel tr td {
+footer .footer .right-panel tr th,
+footer .footer .right-panel tr td {
   width: 80px;
 }/*# sourceMappingURL=style.css.map */
