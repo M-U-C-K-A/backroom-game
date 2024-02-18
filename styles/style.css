@@ -62,7 +62,9 @@ body {
 
 header {
   z-index: 50;
-  background-color: black;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background-color: transparent;
   position: fixed;
   width: 100%;
   padding: 18px 12px;
