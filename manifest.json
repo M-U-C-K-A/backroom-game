@@ -2,23 +2,24 @@
     "name": "The Escape - horror game",
     "short_name": "TheEscape",
     "start_url": ".",
-    "display": "Clash Display",
+    "display": "standalone",
     "background_color": "#0e100f",
+    "theme_color": "#990000",
     "description": "Le meilleur jeu d'horreur sur les backrooms !",
     "icons":[
-    {
-        "src": "src/logo.svg",
-        "type": "image/svg"
-      },
-      {
-        "src": "src/full-logo.png",
-        "sizes": "1521x290",
-        "type": "image/png"
-      },
-      {
-        "src": "src/icon.png",
-        "sizes": "196x229",
-        "type": "image/png"
-      }
+        {
+            "src": "src/logo.svg",
+            "type": "image/svg"
+        },
+        {
+            "src": "src/full-logo.png",
+            "sizes": "1521x290",
+            "type": "image/png"
+        },
+        {
+            "src": "src/icon.png",
+            "sizes": "196x229",
+            "type": "image/png"
+        }
     ]
 }
