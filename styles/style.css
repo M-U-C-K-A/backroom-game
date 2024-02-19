@@ -278,6 +278,10 @@ header a.secondary {
   width: 800px;
 }
 
+#hero-bg {
+  z-index: -10;
+}
+
 #demo {
   height: 300px;
 }
