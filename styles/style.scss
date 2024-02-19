@@ -1,53 +1,13 @@
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("../src/font/ClashDisplay-Regular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("../src/font/ClashDisplay-Bold.otf") format("opentype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("../src/font/ClashDisplay-Extralight.otf") format("opentype");
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("../src/font/ClashDisplay-Light.otf") format("opentype");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("../src/font/ClashDisplay-Medium.otf") format("opentype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "ClashDisplay";
-    src: url("../src/font/ClashDisplay-Semibold.otf") format("opentype");
-    font-weight: 600;
-    font-style: normal;
-}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
     overflow-x: hidden;
-    font-family: "ClashDisplay", "sans-serif";
+    font-family: 'Clash Display', sans-serif;
     tab-size: 4;
     font-feature-settings: "cv11", "ss01";
     font-variation-settings: "opsz" 32;
@@ -55,7 +15,7 @@ body {
     font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 1.2;
-    background-color: #0e100f;
+    background-color: #0a0b0b;
     color: #fffce1;
 }
 .height {
@@ -101,30 +61,32 @@ header {
         }
     }
 }
-
-a {
-    width: fit-content;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 1.3rem;
-    font-weight: 900;
-    border: none;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 12px;
-    img {
-        height: 36px;
-        margin-left: 15px;
-    }
-    &.primary {
-        background-color: #ff87c3;
-        border: 2px solid #ff87c3;
-    }
-    &.secondary {
-        background-color: transparent;
-        color: white;
-        border: 2px solid white;
+main,
+header {
+    a {
+        width: fit-content;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        font-weight: 900;
+        border: none;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 12px;
+        img {
+            height: 36px;
+            margin-left: 15px;
+        }
+        &.primary {
+            background-color: #ff87c3;
+            border: 2px solid #ff87c3;
+        }
+        &.secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
     }
 }
 .main-hero {
@@ -308,7 +270,7 @@ a {
     top: 0;
     left: 0;
     width: 100vw;
-    opacity: .5;
+    opacity: 0.5;
     z-index: -1;
     display: block;
 }
@@ -333,14 +295,14 @@ a {
 }
 
 footer {
+    width: 100vw;
+    background-image: url("../src/Lens\ Flare.png");
+    background-position: 20% 90%;
     display: flex;
     justify-content: center;
-    width: 100vw;
-    background-image: url('../src/Lens\ Flare.png');
-    background-position: 20% 90%;
     .footer {
-        width: 80%;
-        padding: 0 20%;
+        margin: 20px auto;
+        width: 70%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -348,18 +310,18 @@ footer {
         .backroom-image {
             padding: 40px;
             img {
-                width: 140px;
-                height: 140px;
+                width: 340px;
                 object-fit: contain;
             }
         }
         .right-panel {
             tr {
                 display: flex;
-                gap: 20px;
+                gap: 50px;
                 th,
                 td {
-                    width: 80px;
+                    text-align: left;
+                    width: 120px;
                 }
             }
         }

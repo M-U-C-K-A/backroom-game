@@ -6,7 +6,10 @@
     <meta name="google" content="notranslate">
     <meta name="referrer" content="origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <meta name="theme-color" content="#0e100f" />
+    <link rel="manifest" href="manifest.json" />
 
     <meta http-equiv="Content-Language" content="fr-FR">
     <meta property="og:title" content="The Escape - horror game" />
@@ -40,6 +43,7 @@
     <div class="hero-bg absolute top-0 left-0 w-screen h-screen cover block">
         <video muted="true" loop="true" autoplay="true" class="video-player">
             <source src="src/gallery/Trailer_V2.mp4" type="video/mp4" />
+            <track src="captions_fr.vtt" kind="captions" srclang="fr" label="french_captions">
         </video>
     </div>
     <header>
@@ -49,21 +53,20 @@
         <div class="nav-links">
             <ul>
                 <li><a href="https://m-u-c-k-a.github.io/backroom-game/">Accueil</a></li>
-                <li><a href="https://m-u-c-k-a.github.io/backroom-game/gallery">Trailer</a></li>
-                <li><a href="#team">équipe</a></li>
+                <li><a
+                        href="https://drive.google.com/file/d/1XSGrxr-QU2jWVnsOJHDqQxunVn2ukFCO/view?usp=drive_link">Trailer</a>
+                </li>
+                <li><a href="#team">Équipe</a></li>
                 <li><a href="#footer">Contact</a></li>
             </ul>
         </div>
         <div class="platform-icons">
-            <ul>
-                <li><img src="src/playstation.svg" alt="PlayStation"></li>
-                <li><img src="src/windows.svg" alt="Windows"></li>
-                <li><img src="src/xbox.svg" alt="Xbox"></li>
-                <li><img src="src/steam.svg" alt="Steam"></li>
-            </ul>
+            <a class="cursor-pointer" href="https://m-u-c-k-a.github.io/backroom-game/">
+                download game<img src="src/windows.svg" alt="Windows">
+            </a>
         </div>
     </header>
-    <div class="main-hero h-screen w-screen flex justify-start flex-col pt-40 align-center text-center">
+    <main class="main-hero h-screen w-screen flex justify-start flex-col pt-40 align-center text-center">
         <h1 class="main-title w-full height">
             <text x="20" y="35" class="small">the</text>
             <br>
@@ -72,16 +75,16 @@
         <div class="hero-element flex flex-row align-center justify-around">
             <div class=" w-3/6 flex justify-center">
                 <p class="flex content-end">*le jeu est aussi disponible en </p>
-                <a class="flex content-start" href="">vr</a>
+                <a class="flex content-start" href="https://m-u-c-k-a.github.io/backroom-game/">vr</a>
             </div>
             <div class="call-to-action w-3/6 flex flex-row justify-center align-center gap-15">
-                <a class="secondary p-4">
+                <a class="secondary p-4" href="https://m-u-c-k-a.github.io/backroom-game/">
                     <img src="src/windows-fill.svg" alt="Windows"> Télécharger sur Windows</button>
                 </a>
             </div>
         </div>
-    </div>
-    <div id="team" class="team-section">
+    </main>
+    <div id="team" class="team-section mt-32">
         <ul class="team-members">
             <li>Astélie</li>
             <li> · </li>
@@ -97,8 +100,42 @@
         </ul>
         <h2 class="team-description">L'équipe à l'origine de la licence<span class="strong">The escape</span></h2>
     </div>
+    <div class="project-cards" id="project-cards">
+        <div class="project-card" onclick="window.location.href='https://henryonastelie.000webhostapp.com';">
+            <h2 class="card-number">01</h2>
+            <h3 class="job-title">Modélisation 3D</h3>
+            <h4 class="member-name">Astelie</h4>
+        </div>
+        <div class="project-card" onclick="window.location.href='https://www.linkedin.com/in/esther-amegnisse/';">
+            <h2 class="card-number">02</h2>
+            <h3 class="job-title">Intégration VR</h3>
+            <h4 class="member-name">Esther</h4>
+        </div>
+        <div class="project-card" onclick="window.location.href='https://hugodelacour.com';">
+            <h2 class="card-number">03</h2>
+            <h3 class="job-title">Développeur Web</h3>
+            <h4 class="member-name">Hugo</h4>
+        </div>
+        <div class="project-card" onclick="window.location.href='https://tombihoreau.online';">
+            <h2 class="card-number">04</h2>
+            <h3 class="job-title">Développeur web</h3>
+            <h4 class="member-name">Tom</h4>
+        </div>
+        <div class="project-card"
+            onclick="window.location.href=window.location.href='https://www.linkedin.com/in/bilal-boukhorissa-6153622a1/';">
+            <h2 class="card-number">05</h2>
+            <h4 class="job-title">Programmeur</h4>
+            <h3 class="member-name">Bilal</h3>
+        </div>
+        <div class="project-card"
+            onclick="window.location.href='https://boukhorissa-nabil-portfolio.000webhostapp.com';">
+            <h2 class="card-number">06</h2>
+            <h4 class="job-title">Programmeur</h4>
+            <h3 class="member-name">Nabil</h3>
+        </div>
+    </div>
 
-    <div class="story-project flex flex-col justify-center content-center items-center flex-wrap prose">
+    <div class="story-project flex mt-24 flex-col justify-center content-center items-center flex-wrap prose">
         <div class="information mb-5 max-w-screen-2xl">
             <h2 class="text-4xl bold mb-5">The Escape</h2>
             <p class="text-xl mb-5"><span class="font-extrabold underline">S'échapper :</span> Explorez chaque recoin
@@ -113,38 +150,28 @@
         </div>
         <div id="demo" class="w-full flex justify-center text-center relative h-20 w-98 m-auto"></div>
 
-        <div class="project-cards" id="project-cards">
-            <div class="project-card" onclick="window.location.href='https://henryonastelie.000webhostapp.com';">
-                <h2 class="card-number">01</h2>
-                <h4 class="job-title">Modélisation 3D</h4>
-                <h3 class="member-name">Asterie</h3>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://henryonastelie.000webhostapp.com';">
-                <h2 class="card-number">02</h2>
-                <h4 class="job-title">Intégration VR</h4>
-                <h3 class="member-name">Esther</h3>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://hugodelacour.com';">
-                <h2 class="card-number">03</h2>
-                <h4 class="job-title">Développeur Web</h4>
-                <h3 class="member-name">Hugo</h3>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://tombihoreau.online';">
-                <h2 class="card-number">04</h2>
-                <h4 class="job-title">Développeur web</h4>
-                <h3 class="member-name">Tom</h3>
-            </div>
-            <div class="project-card"
-                onclick="window.location.href='https://boukhorissa-nabil-portfolio.000webhostapp.com';">
-                <h2 class="card-number">05</h2>
-                <h4 class="job-title">Programmeur</h4>
-                <h3 class="member-name">Bilal</h3>
-            </div>
-            <div class="project-card" onclick="window.location.href='https://hugodelacour.com';">
-                <h2 class="card-number">06</h2>
-                <h4 class="job-title">Programmeur</h4>
-                <h3 class="member-name">Nabil</h3>
-            </div>
+        <div class="lore max-w-screen-2xl">
+            <h2 class="text-5xl font-bold">le lore</h2>
+            <p class="section-paragraph prose mb-6 text-xl">
+                Les backrooms sont des dimensions créées par des scientifiques dans les années 80 pour pallier le manque
+                d'espace dû à la surpopulation. Initialement aménagés comme des bureaux ou des zones de stockage
+                supplémentaires, ces espaces ont généré des failles dimensionnelles, donnant naissance aux backrooms.
+                Ces dernières évoluent indépendamment et aspirent des lieux abandonnés pour s'étendre.
+            </p>
+            <p class="section-paragraph prose mb-6 text-xl">
+                Ces dimensions aspirent aléatoirement des individus, cherchant à remplir leur but initial en peuplant
+                les espaces vides avec de nouvelles personnes. Les anciennes personnes aspirées, ont exploré les
+                backrooms et ont laissé des indices sur les monstres et les caractéristiques de ces lieux.
+            </p>
+            <p class="section-paragraph prose mb-4 text-xl">
+                Certains anciens, après un laps de temps, se transforment en monstres sans mourir. Les backrooms
+                contrôlent ces monstres pour empêcher les nouveaux aspirés de quitter cet environnement. Les anciens
+                étudient ces créatures pour découvrir leurs faiblesses, observant leur transformation ou en analysant
+                d'autres anciens devenus monstres.</p>
+            <p class="section-paragraph prose mb-4 text-xl">
+                La transformation en monstres est attribuée à une bactérie spéciale évoluant dans les backrooms pendant
+                la création des failles. Certains anciens ont découvert des zones sûres dans les backrooms, indiquant
+                ainsi des endroits où les monstres semblent craindre d'aller.</p>
         </div>
         <div class="immersive-gameplay-section">
             <h2 class="section-title">premier étage</h2>
@@ -190,91 +217,92 @@
                 <img src="src/gallery/bilal-small.png" alt="Immersive Gameplay Image 2">
             </div>
         </div>
-        <footer>
-            <div id="footer" class="footer">
-                <div class="backroom-image">
-                    <img src="src/icon.png" alt="">
-                </div>
-                <div class="right-panel">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>contact</th>
-                                <th>game</th>
-                                <th>membres</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>github</td>
-                                <td>steam</td>
-                                <td>Astélie</td>
-                            </tr>
-                            <tr>
-                                <td>discord</td>
-                                <td>vr</td>
-                                <td>Hugo</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>windows</td>
-                                <td>Tom</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>Bilal</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>Nabil</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>Esther</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+    </div>
+    <footer>
+        <div id="footer" class="footer">
+            <div class="backroom-image">
+                <img src="src/full-logo.png" alt="">
             </div>
-        </footer>
+            <div class="right-panel">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>contact</th>
+                            <th>game</th>
+                            <th>membres</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/M-U-C-K-A/backroom-game">github</a></td>
+                            <td>windows</td>
+                            <td><a href="https://henryonastelie.000webhostapp.com/">Astélie</a></td>
+                        </tr>
+                        <tr>
+                            <td>discord</td>
+                            <td>vr version</td>
+                            <td><a href="https://www.hugodelacour.com">Hugo</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>bientot steam</td>
+                            <td><a href="https://tombihoreau.online/">Tom</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><a href="https://www.linkedin.com/in/bilal-boukhorissa-6153622a1/">Bilal</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><a href="https://boukhorissa-nabil-portfolio.000webhostapp.com/">Nabil</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><a href="https://www.linkedin.com/in/esther-amegnisse/">Esther</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </footer>
 
 
 
-        <script defer>
-            gsap.registerPlugin(TextPlugin, EasePack);
+    <script defer>
+        gsap.registerPlugin(TextPlugin, EasePack);
 
-            var container = $("#demo"),
-                _sentenceEndExp = /(\.|\?|!)$/g;
+        var container = $("#demo"),
+            _sentenceEndExp = /(\.|\?|!)$/g;
 
-            function machineGun(text) {
-                var words = text.split(" "),
-                    tl = gsap.timeline({ delay: 0.6, repeat: 200, repeatDelay: 1.3 }),
-                    wordCount = words.length,
-                    time = 0,
-                    word, element, duration, isSentenceEnd, i;
+        function machineGun(text) {
+            var words = text.split(" "),
+                tl = gsap.timeline({ delay: 0.6, repeat: 200, repeatDelay: 1.3 }),
+                wordCount = words.length,
+                time = 0,
+                word, element, duration, isSentenceEnd, i;
 
-                for (i = 0; i < wordCount; i++) {
-                    word = words[i];
-                    isSentenceEnd = _sentenceEndExp.test(word);
-                    element = $("<h3>" + word + "</h3>").appendTo(container);
-                    duration = Math.max(0.5, word.length * 0.08);
-                    if (isSentenceEnd) {
-                        duration += 0.6;
-                    }
-                    gsap.set(element, { autoAlpha: 0, scale: 0, z: 0.01 });
-                    tl.to(element, duration, { scale: 1.2, ease: "slow(0.25, 0.9)" }, time)
-                        .to(element, duration, { autoAlpha: 1, ease: "slow(0.25, 0.9, true)" }, time);
-                    time += duration - 0.05;
-                    if (isSentenceEnd) {
-                        time += 0.6;
-                    }
+            for (i = 0; i < wordCount; i++) {
+                word = words[i];
+                isSentenceEnd = _sentenceEndExp.test(word);
+                element = $("<h3>" + word + "</h3>").appendTo(container);
+                duration = Math.max(0.5, word.length * 0.08);
+                if (isSentenceEnd) {
+                    duration += 0.6;
                 }
-
+                gsap.set(element, { autoAlpha: 0, scale: 0, z: 0.01 });
+                tl.to(element, duration, { scale: 1.2, ease: "slow(0.25, 0.9)" }, time)
+                    .to(element, duration, { autoAlpha: 1, ease: "slow(0.25, 0.9, true)" }, time);
+                time += duration - 0.05;
+                if (isSentenceEnd) {
+                    time += 0.6;
+                }
             }
-            machineGun("Si vous vous perdez, il vous gagnera...");</script>
+
+        }
+        machineGun("Si vous vous perdez, il vous gagnera...");</script>
     </div>
 </body>
 
